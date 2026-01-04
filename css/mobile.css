@@ -1,0 +1,547 @@
+@media (max-width: 768px) {
+
+  /* מסתירים דסקטופ */
+  .header-desktop {
+    display: none;
+  }
+
+  /* HEADER MOBILE */
+  .header-mobile {
+    display: block;
+    background-color: black;
+    position: relative;
+    width: 100%;
+    z-index: 1000;
+  }
+
+  /* MOBILE TOP - רק הלוגו */
+  .header-mobile .mobile-top {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 16px;
+  }
+
+  /* לוגו – ייעלם בגלילה */
+  .header-mobile .mobile-logo.scrolled {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+  }
+
+  .header-mobile .mobile-logo img {
+    width: 90px;
+    height: auto;
+  }
+
+  /* BURGER תמיד על המסך */
+  .header-mobile .burger {
+    position: fixed;
+    top: 16px;
+    right: 16px;
+    font-size: 28px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    z-index: 1001;
+  }
+
+  /* NAV מעל כל התוכן */
+  .header-mobile .mobile-nav {
+    display: none;           /* סגור כברירת מחדל */
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.95);
+    padding-top: 80px;
+    align-items: center;
+    z-index: 1000;
+  }
+
+  /* קישורים NAV */
+  .header-mobile .mobile-nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 12px 0;
+    text-align: center;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+    width: 100%;
+  }
+}
+
+
+
+
+
+@media (max-width: 768px) {
+
+  .hero {
+    position: relative;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    overflow: hidden; /* זה קריטי */
+    background: none; /* לא נוגעים בדסקטופ – רק מובייל */
+  }
+
+  .hero-video {
+    width: 100%;
+    height: 100%;
+    object-fit: fit; /* רואים את כל הווידאו */
+    display: block;
+  }
+
+}
+
+@media (max-width: 768px) {
+
+  .profile-section {
+    padding: 30px 20px; /* מצמצם רווח מה-HERO */
+	margin-bottom: -40px;
+  }
+
+  .profile-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    text-align: center;
+  }
+
+  /* טקסט קודם */
+  .profile-text {
+    order: 1;
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  /* תמונה אחרי */
+  .profile-container img {
+    order: 2;
+    width: 100%;
+    max-width: 360px;
+    height: auto;
+    border-radius: 12px;
+  }
+}
+
+@media (max-width: 768px) {
+
+    /* Gap קטן יותר מעל הסקשן */
+    .testimonials-section {
+        padding: 40px 20px; /* מצמצם את ה-gap למובייל */
+		margin-top: -40px;
+    }
+
+    .testimonials-section h2 {
+        font-size: 28px;   /* קטן יותר למובייל */
+        margin-bottom: 25px;
+    }
+
+    .testimonial-container {
+        max-width: 100%;   /* ממלא את רוחב המסך */
+        padding: 0 10px;   /* מעט פנימי מצדדים */
+    }
+
+    .testimonial p {
+        font-size: 16px;   /* קטן יותר לקריאה במובייל */
+        line-height: 1.4;
+        margin-bottom: 8px;
+    }
+
+    .client-name {
+        font-size: 14px;   /* קטן יותר */
+    }
+
+    .stars {
+        font-size: 20px;   /* קטן יותר */
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .floating-contact img {
+        width: 40px;   /* קטן יותר למובייל */
+        height: 40px;
+    }
+
+    .floating-contact {
+        gap: 15px;     /* קצת פחות מרווח בין האייקונים */
+        right: 15px;   /* מעט הזזה פנימה מצד ימין */
+        bottom: 30px;  /* מעט הזזה פנימה למטה */
+    }
+}
+
+
+@media (max-width: 768px) {
+
+    /* צמצום המרווח מעל הפוטר במובייל */
+    footer {
+        margin-top: 20px !important;  /* מרווח קטן יותר מעל הפוטר */
+        padding: 20px 15px;           /* שומר על פדינג פנימי נוח */
+    }
+
+    /* אם צריך גם אפשר להקטין את המרווח בין שורות האייקונים */
+    footer .social-icons {
+        gap: 10px; /* מצמצם את המרווח בין שתי השורות */
+    }
+}
+
+
+/* =====================
+   BEATS HERO - MOBILE
+   ===================== */
+@media (max-width: 768px) {
+  .beats-hero {
+    padding: 120px 16px 30px; /* פחות פדינג עליון למובייל */
+    text-align: center;
+    padding-top: 150px; /* עדיין לא גבוה מדי */
+	margin-top: -100px;
+	margin-bottom: 20px;
+  }
+
+  .beats-hero h1 {
+    font-size: clamp(1.8rem, 6vw, 2.8rem);
+    letter-spacing: 0.06em;
+  }
+}
+
+/* =====================
+   BEATS LIST - MOBILE
+   ===================== */
+@media (max-width: 768px) {
+  .beats-list {
+    max-width: 100%;
+    padding: 20px 16px;
+    display: grid;
+    grid-template-columns: 1fr; /* עמודה אחת במובייל */
+    row-gap: 25px;              /* רווח בין שירים */
+    column-gap: 0;              /* אין צורך בעמודות */
+    margin: 0 auto;
+  }
+
+  .beat-item {
+    margin-bottom: 30px;
+    margin-top: -30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .beat-item h2 {
+    font-size: 1rem;
+    margin-bottom: 8px;
+    letter-spacing: 0.05em;
+  }
+
+  .beat-item audio {
+    width: 100%;
+    max-width: 100%; /* יתאים לרוחב המסך */
+    height: 42px;
+    border-radius: 0;
+  }
+}
+
+
+/* =====================
+   COMPOSITIONS HERO - MOBILE
+   ===================== */
+@media (max-width: 768px) {
+  .compositions-hero {
+    padding: 120px 16px 30px; /* פחות פדינג עליון */
+    padding-top: 150px;       /* עדיין לא גבוה מדי */
+    margin-top: -120px;       /* מתאים למובייל */
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .compositions-hero h1 {
+    font-size: clamp(1.8rem, 6vw, 2.8rem);
+    letter-spacing: 0.06em;
+  }
+
+  .compositions-hero .category-title {
+    font-size: clamp(1.6rem, 5vw, 2rem);
+    margin-top: 10px;
+    text-align: center;
+    letter-spacing: 0.05em;
+  }
+
+  /* =====================
+     COMPOSITIONS LIST - MOBILE
+     ===================== */
+  .compositions-list {
+    max-width: 100%;
+    padding: 20px 16px;
+    display: grid;
+    grid-template-columns: 1fr; /* עמודה אחת */
+    row-gap: 25px;              /* רווח בין שירים */
+    column-gap: 0;
+    margin: 0 auto;
+	margin-top: -20px;
+  }
+
+  .compositions-item {
+    margin-bottom: 20px;
+    margin-top: -30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .compositions-item h2 {
+    font-family: 'Cinzel', serif;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+    letter-spacing: 0.05em;
+    text-align: center;
+  }
+
+  .compositions-item audio {
+    width: 100%;
+    max-width: 100%; /* יתאים לרוחב המסך */
+    height: 42px;
+    border-radius: 0;
+    outline: none;
+  }
+}
+
+
+/* =====================
+   MASTERING HERO - MOBILE
+   ===================== */
+@media (max-width: 768px) {
+  .mastering-hero {
+    padding: 120px 16px 30px;
+    padding-top: 150px;
+    margin-top: -120px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .mastering-hero h1 {
+    font-size: clamp(1.8rem, 6vw, 2.8rem);
+    letter-spacing: 0.06em;
+  }
+
+/* =====================
+   MASTERING MENU - MOBILE
+   ===================== */
+.mastering-menu {
+  margin: 15px 0;
+  text-align: center;
+  margin-top: -20px;
+  margin-bottom: 50px;
+}
+
+.menu-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; /* שתי שורות במידת הצורך */
+  gap: 6px;       /* רווח בין התיבות */
+}
+
+.menu-item {
+  flex: 1 1 30%;   /* תיבת תפריט צרה יותר */
+  max-width: 30%;
+  text-align: center;
+  padding: 6px 4px; /* פחות פדינג פנימי */
+  border-radius: 6px;
+  font-weight: 600;
+  font-family: sans-serif;
+  color: #000;
+  border: 2px solid #000;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-size: 0.85rem; /* קטן יותר */
+}
+
+.menu-item:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+  /* =====================
+     MASTERING LIST - MOBILE
+     ===================== */
+  .mastering-list {
+    max-width: 100%;
+    padding: 20px 16px;
+    display: grid;
+    grid-template-columns: 1fr; /* עמודה אחת */
+    row-gap: 25px;
+    column-gap: 0;
+    margin: 0 auto;
+    margin-top: -20px;
+  }
+
+  .mastering-item {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* שמות שיר ואמן */
+  .mastering-item h2,
+  .mastering-item h3 {
+    font-family: 'Cinzel', serif;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+    letter-spacing: 0.05em;
+    text-align: center;
+  }
+
+  /* כל נגן בשורה משלו */
+  .audio-pair {
+    display: flex;
+    flex-direction: column; /* שורה לכל נגן */
+    gap: 15px;
+    width: 100%;
+    align-items: center;
+  }
+
+  .audio-wrapper {
+    width: 100%;
+  }
+
+  .audio-wrapper p {
+    font-family: 'Cinzel', serif;
+    text-align: center;
+    margin-bottom: 5px;
+    cursor: default;
+    transition: color 0.25s ease;
+  }
+
+  .audio-wrapper audio {
+    width: 100%;
+    max-width: 100%;
+    height: 42px;
+    border-radius: 0;
+    outline: none;
+  }
+}
+
+
+
+/* =====================
+   mixing HERO - MOBILE
+   ===================== */
+@media (max-width: 768px) {
+  .mixing-hero {
+    padding: 120px 16px 30px;
+    margin-top: -90px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .mixing-hero h1 {
+    font-size: clamp(1.8rem, 6vw, 2.8rem);
+    letter-spacing: 0.06em;
+  }
+
+/* =====================
+   mixing MENU - MOBILE
+   ===================== */
+.mixing-menu {
+  margin: 15px 0;
+  text-align: center;
+  margin-top: -20px;
+  margin-bottom: 50px;
+}
+
+.menu-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; /* שתי שורות במידת הצורך */
+  gap: 6px;       /* רווח בין התיבות */
+}
+
+.menu-item {
+  flex: 1 1 30%;   /* תיבת תפריט צרה יותר */
+  max-width: 30%;
+  text-align: center;
+  padding: 6px 4px; /* פחות פדינג פנימי */
+  border-radius: 6px;
+  font-weight: 600;
+  font-family: sans-serif;
+  color: #000;
+  border: 2px solid #000;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-size: 0.85rem; /* קטן יותר */
+}
+
+.menu-item:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+  /* =====================
+     mixing LIST - MOBILE
+     ===================== */
+  .mixing-list {
+    max-width: 100%;
+    padding: 20px 16px;
+    display: grid;
+    grid-template-columns: 1fr; /* עמודה אחת */
+    row-gap: 25px;
+    column-gap: 0;
+    margin: 0 auto;
+    margin-top: -20px;
+  }
+
+  .mixing-item {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* שמות שיר ואמן */
+  .mixing-item h2,
+  .mixing-item h3 {
+    font-family: 'Cinzel', serif;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+    letter-spacing: 0.05em;
+    text-align: center;
+  }
+
+  /* כל נגן בשורה משלו */
+  .audio-pair {
+    display: flex;
+    flex-direction: column; /* שורה לכל נגן */
+    gap: 15px;
+    width: 100%;
+    align-items: center;
+  }
+
+  .audio-wrapper {
+    width: 100%;
+  }
+
+  .audio-wrapper p {
+    font-family: 'Cinzel', serif;
+    text-align: center;
+    margin-bottom: 5px;
+    cursor: default;
+    transition: color 0.25s ease;
+  }
+
+  .audio-wrapper audio {
+    width: 100%;
+    max-width: 100%;
+    height: 42px;
+    border-radius: 0;
+    outline: none;
+  }
+}

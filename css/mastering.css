@@ -1,0 +1,115 @@
+.mastering-hero {
+  padding: 200px 20px 40px;
+  text-align: center;
+}
+
+.mastering-hero h1 {
+  font-size: clamp(2.2rem, 5vw, 3.5rem);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.mastering-genre-title {
+  text-align: center;
+  margin-top: -20px;
+  margin-bottom: -20px;
+}
+
+.mastering-genre-title h2 {
+  font-family: sans-serif;
+  font-size: 2rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+}
+
+.mastering-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 60px;
+  max-width: 750px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.mastering-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.mastering-item h2,
+.mastering-item h3,
+.mastering-item p {
+  font-family: 'Cinzel', serif;
+  margin: 5px 0;
+  text-align: center;
+  cursor: default;
+  transition: color 0.25s ease;
+}
+
+.mastering-item h2:hover,
+.mastering-item h3:hover,
+.mastering-item p:hover {
+  filter: brightness(0) saturate(100%) invert(45%) sepia(45%) saturate(550%) hue-rotate(15deg) brightness(95%) contrast(95%);
+}
+
+.audio-pair {
+  display: flex;
+  gap: 20px;
+  width: 100%;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.audio-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+audio {
+  width: 100%;
+  max-width: 420px;
+  height: 42px;
+  border-radius: 0;
+}
+
+audio::-webkit-media-controls-panel {
+  border-radius: 0;
+}
+
+
+.mastering-menu {
+  text-align: center;
+  margin: 40px 0;
+  margin-top: -20px;
+}
+
+.menu-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.menu-item {
+  display: inline-block;
+  padding: 10px 20px;
+  border: 2px solid white; /* אפשר לשנות צבע גבול */
+  border-radius: 8px;
+  text-decoration: none;
+  font-family: sans-serif; /* אפשר לשנות אם רוצים Cinzel */
+  font-weight: 600;
+  color: #000;
+  transition: all 0.3s ease;
+  background-color: white;
+}
+
+.menu-item:hover {
+  background-color: #000;
+  color: #fff;
+}

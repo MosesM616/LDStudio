@@ -1,0 +1,89 @@
+.compositions-hero {
+  padding: 80px 20px 40px;
+  text-align: center;
+  padding-top: 200px;
+}
+
+.compositions-hero h1 {
+  font-size: clamp(2.2rem, 5vw, 3.5rem);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.compositions-hero .category-title {
+  font-size: clamp(1.8rem, 4vw, 2.2rem);
+  font-weight: 600;
+  text-align: center;
+  letter-spacing: 0.08em;
+}
+
+.compositions-list {
+  max-width: 750px;
+  margin: 0 auto;
+  padding: 40px 20px;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 70px;
+}
+
+.compositions-item {
+  margin-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: -30px;
+}
+
+.compositions-item h2 {
+  text-align: center;
+  font-family: 'Cinzel', serif; /* פונט כמו ב-BEATS */
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 5px;
+  letter-spacing: 0.08em;
+  cursor: default;
+  transition: color 0.25s ease;
+}
+
+.compositions-item audio {
+  width: 100%;
+  max-width: 420px;
+  height: 42px;
+  border-radius: 0; /* מרובע */
+  outline: none;
+}
+
+.compositions-item h2:hover {
+  filter: brightness(0) saturate(100%)
+        invert(45%) sepia(45%) saturate(550%)
+        hue-rotate(15deg) brightness(95%) contrast(95%);
+}
+
+audio::-webkit-media-controls-panel {
+  border-radius: 0;
+}
+
+
+.compositions-hero2 {
+  padding: 80px 20px 40px;
+  text-align: center;
+  padding-top: 10px;
+  margin-top: -40px;
+}
+
+.compositions-hero2 h1 {
+  font-size: clamp(2.2rem, 5vw, 3.5rem);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.compositions-hero2 .category-title {
+  font-size: clamp(1.8rem, 4vw, 2.2rem);
+  font-weight: 600;
+  text-align: center;
+  letter-spacing: 0.08em;
+}

@@ -1,0 +1,66 @@
+.beats-hero {
+  padding: 80px 20px 40px;
+  text-align: center;
+   padding-top: 200px;
+}
+
+.beats-hero h1 {
+  font-size: clamp(2.2rem, 5vw, 3.5rem);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.beats-list {
+  max-width: 750px;
+  margin: 0 auto;
+  padding: 40px 20px;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 70px;
+
+}
+
+.beat-item {
+  margin-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: -30px;
+}
+
+.beat-item h2 {
+  text-align: center;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 5px;
+  letter-spacing: 0.08em;
+  cursor: default;
+  transition: color 0.25s ease;
+}
+
+.beat-item audio {
+  width: 100%;
+  max-width: 420px;
+  height: 42px;
+  border-radius: 0; /* מרובע */
+  outline: none;
+}
+
+.beat-item h2:hover {
+  filter: brightness(0) saturate(100%)
+        invert(45%) sepia(45%) saturate(550%)
+        hue-rotate(15deg) brightness(95%) contrast(95%);
+}
+
+audio::-webkit-media-controls-panel {
+  
+  border-radius: 0;
+}
+
+audio::-webkit-media-controls-play-button,
+audio::-webkit-media-controls-timeline,
+audio::-webkit-media-controls-volume-slider {
+
+}
