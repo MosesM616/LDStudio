@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moses Michael - LDS Studio - Portfolio</title>
+    <link rel="stylesheet" href="css/reset.css">
+<link rel="stylesheet" href="css/global.css">
+<link rel="stylesheet" href="css/beats.css">
+<link rel="stylesheet" href="css/mobile.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- HEADER DESKTOP -->
+<header class="header-desktop">
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="mixing.html">Mixing</a></li>
+      <li><a href="mastering.html">Mastering</a></li>
+      <li><a href="beats.html">Beats</a></li>
+      <li><a href="compositions.html">Compositions</a></li>
+    </ul>
+  </nav>
+
+  <div class="logo">
+    <a href="index.html">
+      <img src="assets/logo/logo.png" alt="LDS Logo">
+    </a>
+  </div>
+</header>
+
+<header class="header-mobile">
+  <div class="mobile-top">
+    <a href="index.html" class="mobile-logo">
+      <img src="assets/logo/logo.png" alt="LDS Logo">
+    </a>
+    <!-- BURGER עכשיו בתוך mobile-top -->
+    <button class="burger" aria-label="Open menu">☰</button>
+  </div>
+
+  <nav class="mobile-nav">
+    <a href="index.html">Home</a>
+    <a href="mixing.html">Mixing</a>
+    <a href="mastering.html">Mastering</a>
+    <a href="beats.html">Beats</a>
+    <a href="compositions.html">Compositions</a>
+  </nav>
+</header>
+
+
+	
+	
+	
+	<section class="beats-hero">
+  <h1>Original Beats</h1>
+</section>
+
+<section class="beats-list">
+
+  <div class="beat-item">
+    <h2 class="track-title">Dark Mode</h2>
+    <audio controls>
+      <source src="assets/audio/beats/dark-mode.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+  </div>
+
+  <div class="beat-item">
+    <h2 class="track-title">Crystal Echo</h2>
+    <audio controls>
+      <source src="assets/audio/beats/crystal-echo.mp3" type="audio/mpeg">
+    </audio>
+  </div>
+
+  <div class="beat-item">
+    <h2 class="track-title">Velvet</h2>
+    <audio controls>
+      <source src="assets/audio/beats/velvet.mp3" type="audio/mpeg">
+    </audio>
+  </div>
+
+  <div class="beat-item">
+    <h2 class="track-title">Devil's Child</h2>
+    <audio controls>
+      <source src="assets/audio/beats/devils-child.mp3" type="audio/mpeg">
+    </audio>
+  </div>
+
+</section>
+
+
+
+
+    <!-- Floating Contact Icons -->
+    <div class="floating-contact">
+        <a href="https://wa.me/+972549778662" class="whatsapp-icon" target="_blank">
+            <img src="assets/images/icons/svg/whatsapp.svg" alt="WhatsApp">
+        </a>
+        <a href="mailto:lds@lds-studio.online" class="email-icon" target="_blank">
+            <img src="assets/images/icons/svg/email.svg" alt="Email">
+        </a>
+    </div>
+
+
+<script>
+  const players = document.querySelectorAll("audio");
+
+  players.forEach(player => {
+    player.addEventListener("play", () => {
+      players.forEach(otherPlayer => {
+        if (otherPlayer !== player) {
+          otherPlayer.pause();
+          otherPlayer.currentTime = 0;
+        }
+      });
+    });
+  });
+</script>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+  const burger = document.querySelector('.burger');
+  const mobileNav = document.querySelector('.mobile-nav');
+  const mobileLogo = document.querySelector('.mobile-logo');
+
+  // פונקציה לפתיחה / סגירה על ההמבורגר
+  const toggleNav = () => {
+    if (mobileNav.style.display === 'flex') {
+      mobileNav.style.display = 'none';
+    } else {
+      mobileNav.style.display = 'flex';
+    }
+  };
+
+  // מאזין ללחיצה על ההמבורגר
+  burger.addEventListener('click', (e) => {
+    e.stopPropagation(); // כדי לא להפעיל את סגירת התפריט בלחיצה מחוץ
+    toggleNav();
+  });
+
+  // סגירה בלחיצה מחוץ לתפריט
+  document.addEventListener('click', (e) => {
+    if (
+      mobileNav.style.display === 'flex' &&
+      !mobileNav.contains(e.target) &&
+      !burger.contains(e.target)
+    ) {
+      mobileNav.style.display = 'none';
+    }
+  });
+
+  // גלילה – להסתיר את הלוגו
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 50) {
+      mobileLogo.classList.add('scrolled');
+    } else {
+      mobileLogo.classList.remove('scrolled');
+    }
+  });
+
+  // מניעת “ghost click” כאשר ה‑nav פתוח – אם צריך
+  mobileNav.addEventListener('click', (e) => {
+    e.stopPropagation();
+  });
+
+});
+</script>
+
+
+
+
+    <!-- Footer -->
+    <footer>
+        <!-- Social Icons שתי שורות -->
+        <div class="social-icons">
+            <div class="row">
+				<a href="https://www.fiverr.com/s/WEx4D1R" target="_blank"> <img src="assets/images/icons/svg/fiverr.svg" alt="Fiverr"></a>
+				<a href="https://soundbetter.com/profiles/694464-moses-michael---lds-studio" target="_blank"><img src="assets/images/icons/svg/soundbetter.svg" alt="Soundbetter"></a>
+				<a href="https://www.youtube.com/@mosesmichaelmusic-ldsstudio" target="_blank"><img src="assets/images/icons/svg/youtube.svg" alt="YouTube"></a>
+				<a href="https://soundcloud.com/moses-michael-sound-design" target="_blank"><img src="assets/images/icons/svg/soundcloud.svg" alt="Soundcloud"></a>
+				<a href="https://www.instagram.com/mm_music_lds/" target="_blank"><img src="assets/images/icons/svg/instagram.svg" alt="Instagram"></a>
+				<a href="https://www.tiktok.com/@moses_michael_lds_studio" target="_blank"><img src="assets/images/icons/svg/tiktok.svg" alt="TikTok"></a>
+            </div>
+            <div class="row">
+                <a href="https://www.facebook.com/mosesmichaelmusic" target="_blank"><img src="assets/images/icons/svg/facebook.svg" alt="Facebook"></a>
+                <a href="https://x.com/moses_michael_m" target="_blank"><img src="assets/images/icons/svg/x.svg" alt="X"></a>
+				<a href="https://www.threads.com/@mm_music_lds" target="_blank"><img src="assets/images/icons/svg/threads.svg" alt="Threads"></a>
+				<a href="https://www.linkedin.com/in/moshe-michael-961959329/" target="_blank"><img src="assets/images/icons/svg/linkedin.svg" alt="LinkedIn"></a>
+				<a href="mailto:lds@lds-studio.online" target="_blank"><img src="assets/images/icons/svg/email.svg" alt="Email"></a>
+				<a href="https://wa.me/+972549778662" target="_blank"><img src="assets/images/icons/svg/whatsapp.svg" alt="Whatsapp"></a>
+            </div>
+        </div>
+        <p>All Rights Reserved &copy; Moses Michael - LDS Studio</p>
+    </footer>
+
+</body>
+</html>
